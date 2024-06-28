@@ -20,8 +20,10 @@
         <ul>
             <% task.forEach(function(taskItem) { %>
                 <li>
-                    <input type="checkbox" name="check" value="<%= taskItem %>">
-                    <%= taskItem %>
+                    <label>
+                        <input type="checkbox" name="check" value="<%= taskItem %>">
+                        <span><%= taskItem %></span>
+                    </label>
                 </li>
             <% }); %>
         </ul>

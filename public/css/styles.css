@@ -23,9 +23,23 @@ ul {
 li {
     background: #fff;
     margin: 30px 0;
-    padding: 10px;
+    padding: 0; /* Remove padding from li and move it to the label */
     border-radius: 4px;
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Extend touch area for checkbox */
+label {
+    display: block;
+    padding: 10px; /* Move padding to label */
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Make label take full width of li */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 button {
@@ -53,10 +67,6 @@ input[type="text"] {
     width: calc(100% - 22px);
 }
 
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
 .red-button {
     background-color: #ff4542;
 }
@@ -79,6 +89,6 @@ input[type="checkbox"] {
 }
 
 .blue-action {
-    margin-bottom:20px;
-    margin-top:20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
