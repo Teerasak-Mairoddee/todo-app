@@ -19,5 +19,5 @@ This is a simple To-Do List web application built with Node.js, Express, and EJS
   │       └── styles.css
   ├── /views
   │   └── index.ejs
-  ├── app.js
+  ├── index.js
   └── package.json
