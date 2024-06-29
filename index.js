@@ -11,32 +11,36 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // The task array with initial placeholders for added tasks
-var task = ["buy socks", "practice with nodejs"];
+var task = ["Find Seiko cases", "Print more minatures"];
 
 // The complete array to store completed tasks
-var complete = ["finish jquery"];
+var complete = ["29/06/2024, 02:26:14 | Become Elden Lord"];
 
-// Post route for adding new task
+// Post route for adding a new task
 app.post('/addtask', function (req, res) {
-    var newTask = req.body.newtask;
-    // Add the new task from the post route into the array
-    task.push(newTask);
-    // After adding to the array, go back to the root route
+    var newTask = req.body.newtask.trim();
+    if (newTask) {
+        task.push(newTask);
+    }
     res.redirect("/");
 });
 
-// Post route for removing a task
+// Post route for marking tasks as complete
 app.post("/removetask", function (req, res) {
     var completeTask = req.body.check;
-    // Check for the "typeof" the different completed task, then add into the complete task
-    if (typeof completeTask === "string") {
-        complete.push(completeTask);
-        // Check if the completed task already exists in the task when checked, then remove using the array splice method
-        task.splice(task.indexOf(completeTask), 1);
-    } else if (typeof completeTask === "object") {
-        for (var i = 0; i < completeTask.length; i++) {
-            complete.push(completeTask[i]);
-            task.splice(task.indexOf(completeTask[i]), 1);
+    if (completeTask) {
+        console.log("complete task: " + completeTask);
+        if (typeof completeTask === "string") {
+            let currentTime = new Date().toLocaleString();
+            complete.push(currentTime + " | " + completeTask);
+            console.log("push completeTask: " + completeTask);
+            task.splice(task.indexOf(completeTask), 1);
+        } else if (Array.isArray(completeTask)) {
+            completeTask.forEach(function (taskName) {
+                let currentTime = new Date().toLocaleString();
+                complete.push(currentTime +" | "+taskName);
+                task.splice(task.indexOf(taskName), 1);
+            });
         }
     }
     res.redirect("/");
