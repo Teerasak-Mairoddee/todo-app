@@ -78,7 +78,7 @@ input[type="text"] {
 }
 
     .complete-button:hover {
-        background-color: #6ff03c;
+        background-color: #58ab37;
     }
 
 .card {
@@ -99,8 +99,20 @@ input[type="text"] {
     margin-top: 20px;
 }
 
-.completed-li{
+.completed-li {
     margin: 30px;
-    padding:20px;
-    
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.delete-button {
+    background-color: #f22d1b;
+    margin-left: 10px; /* Adjust as needed */
+    cursor: pointer;
+}
+
+    .delete-button:hover {
+        background-color: #d93021;
+    }
