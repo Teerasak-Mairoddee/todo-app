@@ -84,14 +84,23 @@ input[type="text"] {
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     background-color: #fff;
-    margin-left: 8%;
-    margin-right: 8%;
+    padding: 0 90px;
+    /*margin: 0 auto;*/
+    max-width: 1200px;
+    margin: 0 auto;
     margin-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    min-width:490px;
+
+    
+ 
+    
+}
+
+.completed-tasks-list {
+    list-style-type: none;
+    padding: 0;
 }
 
 .blue-action {
@@ -105,6 +114,17 @@ input[type="text"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-width: 200px; /* Adjust min-width as needed */
+    padding: 8px 12px; /* Example padding */
+    border: 1px solid #ccc; /* Example border */
+}
+
+.item-text {
+    flex: 1; /* Allow text to take up remaining space */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px; /* Ensure a 10px gap between text and button */
 }
 
 .delete-button {

@@ -35,14 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Event listener for the Email Completed Tasks button (if needed)
     document.getElementById('email-button').addEventListener('click', function () {
         console.log("Email button pressed script.js");
-
-        // Fetch request to get updated complete array
-        fetch('/getCompleteTasks')
-            .then(response => response.json())
-            .then(data => {
-                console.log("Updated Complete tasks:", data.complete);
-            })
-            .catch(error => console.error('Error fetching complete tasks:', error));
+        const completeTasksJson = this.getAttribute('data-complete-tasks');
+        try {
+            const completeTasks = JSON.parse(completeTasksJson);
+            console.log("Complete tasks:", completeTasks);
+        } catch (error) {
+            console.error('Error parsing complete tasks JSON:', error);
+        }
     });
-
 });

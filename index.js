@@ -27,6 +27,7 @@ app.post('/addtask', function (req, res) {
 
 // Post route for marking tasks as complete
 app.use(bodyParser.json());
+
 app.post("/removetask", function (req, res) {
     var completeTask = req.body.check;
     if (completeTask) {
