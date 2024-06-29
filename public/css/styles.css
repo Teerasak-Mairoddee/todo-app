@@ -73,12 +73,12 @@ input[type="text"] {
     width: calc(100% - 22px);
 }
 
-.red-button {
-    background-color: #ff4542;
+.complete-button {
+    background-color: #6acf42;
 }
 
-    .red-button:hover {
-        background-color: #f56967;
+    .complete-button:hover {
+        background-color: #6ff03c;
     }
 
 .card {

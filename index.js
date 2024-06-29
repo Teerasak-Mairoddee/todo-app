@@ -11,10 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // The task array with initial placeholders for added tasks
-var task = ["buy socks", "practice with nodejs"];
+var task = ["Find Seiko cases", "Print more minatures"];
 
 // The complete array to store completed tasks
-var complete = ["finish jquery"];
+var complete = ["29/06/2024, 02:26:14 | Become Elden Lord"];
 
 // Post route for adding a new task
 app.post('/addtask', function (req, res) {
@@ -29,12 +29,16 @@ app.post('/addtask', function (req, res) {
 app.post("/removetask", function (req, res) {
     var completeTask = req.body.check;
     if (completeTask) {
+        console.log("complete task: " + completeTask);
         if (typeof completeTask === "string") {
-            complete.push(completeTask);
+            let currentTime = new Date().toLocaleString();
+            complete.push(currentTime + " | " + completeTask);
+            console.log("push completeTask: " + completeTask);
             task.splice(task.indexOf(completeTask), 1);
         } else if (Array.isArray(completeTask)) {
             completeTask.forEach(function (taskName) {
-                complete.push(taskName);
+                let currentTime = new Date().toLocaleString();
+                complete.push(currentTime +" | "+taskName);
                 task.splice(task.indexOf(taskName), 1);
             });
         }
