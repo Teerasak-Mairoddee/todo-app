@@ -51,15 +51,25 @@ app.post("/removetask", function (req, res) {
 
 app.post('/deletecompleted', function (req, res) {
     const taskToDelete = req.body.task;
-    console.log("taskToDelete:", taskToDelete);
+    console.log("Task to delete:", taskToDelete);
 
+    // Find the index of the task in the complete array
     const index = complete.indexOf(taskToDelete);
     if (index > -1) {
+        // Remove the task from the complete array
         complete.splice(index, 1);
+        console.log("Task deleted successfully");
         res.json({ success: true });
+        console.log("index.js complete array: " + complete);
     } else {
+        console.log("Task not found in complete array");
         res.json({ success: false });
     }
+});
+
+app.get('/getCompleteTasks', function (req, res) {
+    // Send the updated complete array as JSON response
+    res.json({ complete: complete });
 });
 
 
