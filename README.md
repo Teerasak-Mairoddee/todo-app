@@ -9,21 +9,6 @@ Welcome to the Task Management Application! This project is a simple yet powerfu
 - **Delete Completed Tasks**: Completed tasks can be removed from the list.
 - **View Completed Tasks**: Users can view a list of all completed tasks along with their completion timestamps.
 
-## Project Structure
-
-├── public
-│ ├── css
-│ │ └── styles.css
-│ └── js
-│   └── script.js
-├── views
-│ └── index.ejs
-├── .gitignore
-├── index.js
-├── package.json
-└── README.md
-
-
 ### `public/css/styles.css`
 
 Contains the CSS for styling the application. The styles ensure the application is user-friendly, visually appealing, and responsive.
