@@ -37,8 +37,8 @@ The main server file. It sets up the Express application, defines routes for add
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/task-management-app.git
-    cd task-management-app
+    git clone https://github.com/Teerasak-Mairoddee/todo-app.git
+    cd todo-app
     ```
 
 2. **Install dependencies**:
