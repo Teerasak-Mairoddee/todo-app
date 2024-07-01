@@ -129,7 +129,7 @@ input[type="text"] {
 
 .delete-button {
     background-color: #f22d1b;
-    margin-left: 10px; /* Adjust as needed */
+    margin-left: 10px; /* Adjust as needed. */
     cursor: pointer;
 }
 
