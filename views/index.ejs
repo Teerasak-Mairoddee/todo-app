@@ -37,10 +37,19 @@
         <h2>Completed Tasks</h2>
         <ul>
             <% complete.forEach(function(completeItem) { %>
-                <li class="completed-li"><%= completeItem %></li>
+                <li class="completed-li">
+                    <span><%= completeItem %></span>
+                    <button type="button" class="delete-button" data-task="<%= completeItem %>">Delete</button>
+                </li>
             <% }); %>
         </ul>
+
+
+
+
     </div>
+
+    <script src="/js/script.js"></script>
 
 </body>
 </html>

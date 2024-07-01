@@ -26,6 +26,8 @@ app.post('/addtask', function (req, res) {
 });
 
 // Post route for marking tasks as complete
+app.use(bodyParser.json());
+
 app.post("/removetask", function (req, res) {
     var completeTask = req.body.check;
     if (completeTask) {
@@ -35,15 +37,40 @@ app.post("/removetask", function (req, res) {
             complete.push(currentTime + " | " + completeTask);
             console.log("push completeTask: " + completeTask);
             task.splice(task.indexOf(completeTask), 1);
+            console.log("complete array upper: " + complete);
         } else if (Array.isArray(completeTask)) {
             completeTask.forEach(function (taskName) {
                 let currentTime = new Date().toLocaleString();
                 complete.push(currentTime +" | "+taskName);
                 task.splice(task.indexOf(taskName), 1);
+                console.log("complete array lower: " + complete);
             });
         }
     }
     res.redirect("/");
+});
+
+app.post('/deletecompleted', function (req, res) {
+    const taskToDelete = req.body.task;
+    console.log("Task to delete:", taskToDelete);
+
+    // Find the index of the task in the complete array
+    const index = complete.indexOf(taskToDelete);
+    if (index > -1) {
+        // Remove the task from the complete array
+        complete.splice(index, 1);
+        console.log("Task deleted successfully");
+        res.json({ success: true });
+        console.log("index.js complete array: " + complete);
+    } else {
+        console.log("Task not found in complete array");
+        res.json({ success: false });
+    }
+});
+
+app.get('/getCompleteTasks', function (req, res) {
+    // Send the updated complete array as JSON response
+    res.json({ complete: complete });
 });
 
 
