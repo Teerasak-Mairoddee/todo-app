@@ -103,13 +103,30 @@ This Task Management Application showcases a blend of simplicity and functionali
 
 ---
 
-For any inquiries or collaboration opportunities, please contact [your-email@example.com].
+For any inquiries or collaboration opportunities, please contact teerasakmairoddee556@gmail.com.
 
 ---
 
-*Thank you for checking out the Task Management Application! If you found this project impressive or useful, please star the repository and share it with others.*
+## Use of Resources
+
+In building this Task Management Application, I've utilized a variety of resources including open-source libraries, frameworks, and community-driven tutorials. Leveraging these resources is not just about saving time; it's about standing on the shoulders of giants to deliver robust, high-quality software efficiently.
+
+### Why Using Resources Matters
+
+- **Efficiency**: By using established libraries and frameworks like Express.js and EJS, we can focus on what makes our application unique rather than reinventing the wheel.
+- **Quality**: These resources are battle-tested and maintained by a community of experts, ensuring a level of reliability and security that would be difficult to achieve from scratch.
+- **Learning**: Engaging with community-driven projects and open-source code is an excellent way to learn best practices and advanced techniques, which are crucial skills for any software developer.
+
+### Embracing Open Source
+
+As software developers, our ability to effectively utilize and contribute to open-source projects is a testament to our skill and adaptability. It demonstrates our commitment to continuous learning and our willingness to collaborate with a global community. This project is a reflection of that ethos, blending our unique contributions with the invaluable resources made available by the wider developer community.
+
+By being transparent about our use of resources, we not only show respect for the work of others but also highlight our own skills in selecting, integrating, and building upon these resources to create something meaningful and functional.
 
 ---
+
+*Remember, great software isn't built in isolation; it's crafted through collaboration and shared knowledge.*
+
 
 resources:
 https://medium.com/@atingenkay/creating-a-todo-app-with-node-js-express-8fa51f39b16f
