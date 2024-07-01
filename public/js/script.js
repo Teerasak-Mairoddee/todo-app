@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     .then(data => {
                         console.log("Delete response:", data);
                         if (data.success) {
-                            // Remove the task from the UI
+                            // Remove the task from the UI.
                             this.parentElement.remove(); // Remove li element
                         } else {
                             console.log("Delete operation not successful");

@@ -8,6 +8,6 @@ node_modules/
 logs/
 *.log
 
-# OS or editor-specific files
+# OS or editor-specific files.
 .DS_Store
 .vscode/
